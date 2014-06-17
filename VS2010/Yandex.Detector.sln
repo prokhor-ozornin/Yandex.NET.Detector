@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yandex.Detector.Tests", "Yandex.Detector.Tests\Yandex.Detector.Tests.csproj", "{01221BB5-F026-4C9E-968E-47EF6F03CCF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yandex.Detector.3.5.CP", "Yandex.Detector.3.5.CP\Yandex.Detector.3.5.CP.csproj", "{8806E7CE-770F-4944-AED9-C02D52EE1AA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yandex.Detector.3.5", "Yandex.Detector.3.5\Yandex.Detector.3.5.csproj", "{4DB3BABF-A78B-48AA-AD3A-E0B51AA415A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yandex.Detector.4.0", "Yandex.Detector.4.0\Yandex.Detector.4.0.csproj", "{B15DB5A3-4075-4932-9E38-8D97E32AD05A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yandex.Detector.4.0.CP", "Yandex.Detector.4.0.CP\Yandex.Detector.4.0.CP.csproj", "{6C4ECE90-6AA9-47C8-AA6F-5E8DBBD159AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01221BB5-F026-4C9E-968E-47EF6F03CCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01221BB5-F026-4C9E-968E-47EF6F03CCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01221BB5-F026-4C9E-968E-47EF6F03CCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01221BB5-F026-4C9E-968E-47EF6F03CCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8806E7CE-770F-4944-AED9-C02D52EE1AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8806E7CE-770F-4944-AED9-C02D52EE1AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8806E7CE-770F-4944-AED9-C02D52EE1AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8806E7CE-770F-4944-AED9-C02D52EE1AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB3BABF-A78B-48AA-AD3A-E0B51AA415A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB3BABF-A78B-48AA-AD3A-E0B51AA415A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB3BABF-A78B-48AA-AD3A-E0B51AA415A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB3BABF-A78B-48AA-AD3A-E0B51AA415A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B15DB5A3-4075-4932-9E38-8D97E32AD05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15DB5A3-4075-4932-9E38-8D97E32AD05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15DB5A3-4075-4932-9E38-8D97E32AD05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15DB5A3-4075-4932-9E38-8D97E32AD05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4ECE90-6AA9-47C8-AA6F-5E8DBBD159AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4ECE90-6AA9-47C8-AA6F-5E8DBBD159AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4ECE90-6AA9-47C8-AA6F-5E8DBBD159AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4ECE90-6AA9-47C8-AA6F-5E8DBBD159AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
