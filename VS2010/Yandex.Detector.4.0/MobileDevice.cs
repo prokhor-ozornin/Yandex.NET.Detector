@@ -9,7 +9,7 @@ namespace Yandex.Detector
   ///   <para>Contains information about mobile device and its features and capabilities.</para>
   /// </summary>
   [XmlType("yandex-mobile-info")]
-  public sealed class MobileDevice : IEquatable<MobileDevice>, IMobileDevice
+  public sealed class MobileDevice : IEquatable<IMobileDevice>, IMobileDevice
   {
     /// <summary>
     ///   <para>Description of device's class.</para>
@@ -73,11 +73,11 @@ namespace Yandex.Detector
     }
 
     /// <summary>
-    ///   <para>Determines whether two <see cref="MobileDevice"/> instances are equal.</para>
+    ///   <para>Determines whether two <see cref="IMobileDevice"/> instances are equal.</para>
     /// </summary>
     /// <param name="other">The instance to compare with the current one.</param>
     /// <returns><c>true</c> if specified instance is equal to the current, <c>false</c> otherwise.</returns>
-    public bool Equals(MobileDevice other)
+    public bool Equals(IMobileDevice other)
     {
       return this.Equality(other, x => x.Name);
     }
@@ -89,7 +89,7 @@ namespace Yandex.Detector
     /// <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
     public override bool Equals(object other)
     {
-      return this.Equals(other as MobileDevice);
+      return this.Equals(other as IMobileDevice);
     }
 
     /// <summary>

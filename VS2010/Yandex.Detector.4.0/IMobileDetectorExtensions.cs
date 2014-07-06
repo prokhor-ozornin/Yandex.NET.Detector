@@ -40,7 +40,6 @@ namespace Yandex.Detector
     /// <param name="device">Instance of <see cref="IMobileDevice"/> object, describing capabilities of identified mobile device.</param>
     /// <returns><c>true</c> if request was successfull and <paramref name="device"/> output parameter contains information about determined mobile device, or <c>false</c> if request failed and <paramref name="device"/> output parameter is a <c>null</c> reference.</returns>
     /// <exception cref="ArgumentNullException">If either <paramref name="detector"/> or <paramref name="headers"/> is a <c>null</c> reference.</exception>
-    /// <exception cref="DetectorException">If there was error either during the request to Yandex.Detector web service, or mobile device cannot be identified based on a set of provided HTTP headers.</exception>
     /// <seealso cref="IMobileDetector.Detect(IDictionary{string, object})"/>
     /// <seealso cref="Detect(IMobileDetector, Action{IDetectorRequest})"/>
     /// <seealso cref="Detect(IMobileDetector, Action{IDetectorRequest}, out IMobileDevice)"/>
@@ -54,7 +53,7 @@ namespace Yandex.Detector
         device = detector.Detect(headers);
         return true;
       }
-      catch (DetectorException)
+      catch
       {
         device = null;
         return false;
@@ -69,7 +68,6 @@ namespace Yandex.Detector
     /// <param name="device">Instance of <see cref="IMobileDevice"/> object, describing capabilities of identified mobile device.</param>
     /// <returns><c>true</c> if request was successfull and <paramref name="device"/> output parameter contains information about determined mobile device, or <c>false</c> if request failed and <paramref name="device"/> output parameter is a <c>null</c> reference.</returns>
     /// <exception cref="ArgumentNullException">If either <paramref name="detector"/> or <paramref name="request"/> is a <c>null</c> reference.</exception>
-    /// <exception cref="DetectorException">If there was error either during the request to Yandex.Detector web service, or mobile device cannot be identified based on a set of provided HTTP headers.</exception>
     /// <seealso cref="IMobileDetector.Detect(IDictionary{string, object})"/>
     /// <seealso cref="Detect(IMobileDetector, Action{IDetectorRequest})"/>
     /// <seealso cref="Detect(IMobileDetector, IDictionary{string, object}, out IMobileDevice)"/>
@@ -83,7 +81,7 @@ namespace Yandex.Detector
         device = detector.Detect(request);
         return true;
       }
-      catch (DetectorException)
+      catch
       {
         device = null;
         return false;

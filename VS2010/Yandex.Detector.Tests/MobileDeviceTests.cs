@@ -73,7 +73,7 @@ namespace Yandex.Detector
     /// <summary>
     ///   <para>Performs testing of following methods :</para>
     ///   <list type="bullet">
-    ///     <item><description><see cref="MobileDevice.Equals(MobileDevice)"/></description></item>
+    ///     <item><description><see cref="MobileDevice.Equals(IMobileDevice)"/></description></item>
     ///     <item><description><see cref="MobileDevice.Equals(object)"/></description></item>
     ///   </list>
     /// </summary>

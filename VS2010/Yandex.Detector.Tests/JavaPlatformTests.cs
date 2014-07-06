@@ -59,7 +59,7 @@ namespace Yandex.Detector
     /// <summary>
     ///   <para>Performs testing of following methods :</para>
     ///   <list type="bullet">
-    ///     <item><description><see cref="JavaPlatform.Equals(JavaPlatform)"/></description></item>
+    ///     <item><description><see cref="JavaPlatform.Equals(IJavaPlatform)"/></description></item>
     ///     <item><description><see cref="JavaPlatform.Equals(object)"/></description></item>
     ///   </list>
     /// </summary>

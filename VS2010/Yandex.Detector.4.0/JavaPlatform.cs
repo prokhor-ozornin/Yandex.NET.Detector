@@ -9,7 +9,7 @@ namespace Yandex.Detector
   ///   <para>Mobile Java platform capabilities.</para>
   /// </summary>
   [XmlType("java")]
-  public sealed class JavaPlatform : IEquatable<JavaPlatform>, IJavaPlatform
+  public sealed class JavaPlatform : IEquatable<IJavaPlatform>, IJavaPlatform
   {
     /// <summary>
     ///   <para>Whether Java applications have access to device's camera.</para>
@@ -78,13 +78,13 @@ namespace Yandex.Detector
     public short IconWidth { get; set; }
 
     /// <summary>
-    ///   <para>Determines whether two <see cref="JavaPlatform"/> instances are equal.</para>
+    ///   <para>Determines whether two <see cref="IJavaPlatform"/> instances are equal.</para>
     /// </summary>
     /// <param name="other">The instance to compare with the current one.</param>
     /// <returns><c>true</c> if specified instance is equal to the current, <c>false</c> otherwise.</returns>
-    public bool Equals(JavaPlatform other)
+    public bool Equals(IJavaPlatform other)
     {
-      return this.Equality(other, java => java.Camera, java => java.Certificate, java => java.FileSystem, java => java.IconSize);
+      return this.Equality(other, java => java.Camera, java => java.Certificate, java => java.FileSystem, java => java.IconHeight, java => java.IconWidth);
     }
 
     /// <summary>
@@ -94,7 +94,7 @@ namespace Yandex.Detector
     /// <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
     public override bool Equals(object other)
     {
-      return this.Equals(other as JavaPlatform);
+      return this.Equals(other as IJavaPlatform);
     }
 
     /// <summary>
