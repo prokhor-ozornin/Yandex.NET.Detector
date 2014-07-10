@@ -16,11 +16,11 @@ namespace Yandex.Detector
     public void Xml()
     {
       var device = new MobileDevice();
-      var xml = XDocument.Parse(device.Xml());
+      var xml = XDocument.Parse(device.ToXml());
       Assert.Equal("yandex-mobile-info", xml.Root.Name);
       Assert.Equal("0", xml.Root.Element("screenx").Value);
       Assert.Equal("0", xml.Root.Element("screeny").Value);
-      Assert.Equal(device, device.Xml().Xml<MobileDevice>());
+      Assert.Equal(device, device.ToXml().AsXml<MobileDevice>());
 
       device = new MobileDevice
       {
@@ -38,7 +38,7 @@ namespace Yandex.Detector
         ScreenWidth = 128,
         Vendor = "Alcatel"
       };
-      xml = XDocument.Parse(device.Xml());
+      xml = XDocument.Parse(device.ToXml());
       Assert.Equal("yandex-mobile-info", xml.Root.Name);
       Assert.Equal("One Touch C651", xml.Root.Element("name").Value);
       Assert.Equal("Alcatel", xml.Root.Element("vendor").Value);
@@ -50,7 +50,7 @@ namespace Yandex.Detector
       Assert.Equal("1", java.Element("fs-access").Value);
       Assert.Equal("Thawte", java.Element("certificate-prefix").Value);
       Assert.Equal("18x18", java.Element("iconsize").Value);
-      Assert.Equal(device, device.Xml().Xml<MobileDevice>());
+      Assert.Equal(device, device.ToXml().AsXml<MobileDevice>());
     }
 
     /// <summary>

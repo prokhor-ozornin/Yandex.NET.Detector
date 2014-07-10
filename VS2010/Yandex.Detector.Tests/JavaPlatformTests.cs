@@ -16,13 +16,13 @@ namespace Yandex.Detector
     public void Xml()
     {
       var java = new JavaPlatform();
-      var xml = XDocument.Parse(java.Xml());
+      var xml = XDocument.Parse(java.ToXml());
       Assert.Equal("java", xml.Root.Name);
       Assert.Equal("0", xml.Root.Element("cam-access").Value);
       Assert.Equal("0", xml.Root.Element("fs-access").Value);
       Assert.Null(xml.Root.Element("certificate-prefix"));
       Assert.Equal("0x0", xml.Root.Element("iconsize").Value);
-      Assert.Equal(java, java.Xml().Xml<JavaPlatform>());
+      Assert.Equal(java, java.ToXml().AsXml<JavaPlatform>());
 
       java = new JavaPlatform
       {
@@ -32,13 +32,13 @@ namespace Yandex.Detector
         IconHeight = 16,
         IconWidth = 16
       };
-      xml = XDocument.Parse(java.Xml());
+      xml = XDocument.Parse(java.ToXml());
       Assert.Equal("java", xml.Root.Name);
       Assert.Equal("1", xml.Root.Element("cam-access").Value);
       Assert.Equal("1", xml.Root.Element("fs-access").Value);
       Assert.Equal("Thawte", xml.Root.Element("certificate-prefix").Value);
       Assert.Equal("16x16", xml.Root.Element("iconsize").Value);
-      Assert.Equal(java, java.Xml().Xml<JavaPlatform>());
+      Assert.Equal(java, java.ToXml().AsXml<JavaPlatform>());
     }
 
     /// <summary>

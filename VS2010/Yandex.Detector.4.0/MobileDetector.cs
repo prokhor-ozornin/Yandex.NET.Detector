@@ -39,7 +39,7 @@ namespace Yandex.Detector
 
       try
       {
-        var error = response.Xml<Error>();
+        var error = response.AsXml<Error>();
         throw new DetectorException(error.Text);
       }
       catch (InvalidOperationException)
@@ -48,7 +48,7 @@ namespace Yandex.Detector
 
       try
       {
-        return response.Xml<MobileDevice>();
+        return response.AsXml<MobileDevice>();
       }
       catch (Exception exception)
       {
