@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Yandex.Detector.Tests")]
+[assembly: AssemblyTitle("Yandex.Detector")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Prokhor Ozornin <prokhor.ozornin@yandex.ru>")]
-[assembly: AssemblyProduct("Yandex.Detector.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyProduct("Yandex.Detector")]
+[assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2bc6a830-0188-4bf4-81d6-b2d0bbe98f13")]
+[assembly: Guid("135f8907-a4f7-4944-bdf3-b33ecf49799e")]
 
 // Version information for an assembly consists of the following four values:
 //

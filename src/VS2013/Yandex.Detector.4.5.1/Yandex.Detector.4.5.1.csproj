@@ -1,18 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4DB3BABF-A78B-48AA-AD3A-E0B51AA415A2}</ProjectGuid>
+    <ProjectGuid>{4CA76833-D773-42F6-8ECC-1627922CFE8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Yandex.Detector</RootNamespace>
     <AssemblyName>Yandex.Detector</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,54 +32,53 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Catharsis.Commons">
-      <HintPath>..\packages\Catharsis.Commons.2.8\lib\net35\Catharsis.Commons.dll</HintPath>
+      <HintPath>..\packages\Catharsis.Commons.2.8\lib\net451\Catharsis.Commons.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Yandex.Detector.4.0\DetectorException.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\DetectorException.cs">
       <Link>DetectorException.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\DetectorRequest.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\DetectorRequest.cs">
       <Link>DetectorRequest.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\Error.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\Error.cs">
       <Link>Error.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\IDetectorRequest.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\IDetectorRequest.cs">
       <Link>IDetectorRequest.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\IDetectorRequestExtensions.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\IDetectorRequestExtensions.cs">
       <Link>IDetectorRequestExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\IJavaPlatform.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\IJavaPlatform.cs">
       <Link>IJavaPlatform.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\IMobileDetector.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\IMobileDetector.cs">
       <Link>IMobileDetector.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\IMobileDetectorExtensions.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\IMobileDetectorExtensions.cs">
       <Link>IMobileDetectorExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\IMobileDevice.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\IMobileDevice.cs">
       <Link>IMobileDevice.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\JavaPlatform.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\JavaPlatform.cs">
       <Link>JavaPlatform.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\MobileDetector.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\MobileDetector.cs">
       <Link>MobileDetector.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\MobileDevice.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\MobileDevice.cs">
       <Link>MobileDevice.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\MobileDevicesClass.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\MobileDevicesClass.cs">
       <Link>MobileDevicesClass.cs</Link>
     </Compile>
-    <Compile Include="..\Yandex.Detector.4.0\Yandex.cs">
+    <Compile Include="..\..\VS2010\Yandex.Detector.4.0\Yandex.cs">
       <Link>Yandex.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
