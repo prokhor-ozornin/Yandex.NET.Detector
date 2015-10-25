@@ -14,9 +14,7 @@ var NAVTREEINDEX0 =
 "class_yandex_1_1_detector_1_1_i_detector_request_extensions.html#af6c467686039cc2bb3a57e9b2cc3de67":[1,0,0,0,3,0],
 "class_yandex_1_1_detector_1_1_i_detector_request_extensions.html#afbd4af7024cc3c633917cf2b5fc1d0b4":[1,0,0,0,3,1],
 "class_yandex_1_1_detector_1_1_i_mobile_detector_extensions.html":[1,0,0,0,6],
-"class_yandex_1_1_detector_1_1_i_mobile_detector_extensions.html#a8b3049f79d1a17a58eec0a743896714a":[1,0,0,0,6,2],
-"class_yandex_1_1_detector_1_1_i_mobile_detector_extensions.html#a9516de62917888e54eeb76203078d4f5":[1,0,0,0,6,1],
-"class_yandex_1_1_detector_1_1_i_mobile_detector_extensions.html#ad67080c10634b34f2b90f0fa0bf76c77":[1,0,0,0,6,0],
+"class_yandex_1_1_detector_1_1_i_mobile_detector_extensions.html#a1e06ce4f475327462efd1336dc73422c":[1,0,0,0,6,0],
 "class_yandex_1_1_detector_1_1_java_platform.html":[1,0,0,0,8],
 "class_yandex_1_1_detector_1_1_java_platform.html#a050c0905b400bbc99d9c118e0169b74a":[1,0,0,0,8,9],
 "class_yandex_1_1_detector_1_1_java_platform.html#a08301208e64221f6d8add0827f747ca5":[1,0,0,0,8,3],
@@ -60,7 +58,7 @@ var NAVTREEINDEX0 =
 "interface_yandex_1_1_detector_1_1_i_java_platform.html#ab72a9a1ed0cf3ee1662d1f5f8d064aa1":[1,0,0,0,4,0],
 "interface_yandex_1_1_detector_1_1_i_java_platform.html#ace70b543282c5425eb38a1c268d30762":[1,0,0,0,4,1],
 "interface_yandex_1_1_detector_1_1_i_mobile_detector.html":[1,0,0,0,5],
-"interface_yandex_1_1_detector_1_1_i_mobile_detector.html#a6b436311da21c0332e6a978e49b37814":[1,0,0,0,5,0],
+"interface_yandex_1_1_detector_1_1_i_mobile_detector.html#a5086a4fb4e381ba8ffb690f0a853b027":[1,0,0,0,5,0],
 "interface_yandex_1_1_detector_1_1_i_mobile_device.html":[1,0,0,0,7],
 "interface_yandex_1_1_detector_1_1_i_mobile_device.html#a30b97fa3baef65cc1c939f4141acd0fd":[1,0,0,0,7,4],
 "interface_yandex_1_1_detector_1_1_i_mobile_device.html#a478853842ef206912bd9540f1323bb5f":[1,0,0,0,7,0],
@@ -73,6 +71,5 @@ var NAVTREEINDEX0 =
 "namespace_yandex_1_1_detector.html":[1,0,0,0],
 "namespacemembers.html":[0,0],
 "namespacemembers_enum.html":[0,1],
-"namespacemembers_eval.html":[0,2],
 "pages.html":[]
 };

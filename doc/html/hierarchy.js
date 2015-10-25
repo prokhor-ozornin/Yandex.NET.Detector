@@ -3,13 +3,9 @@ var hierarchy =
     [ "Exception", null, [
       [ "Yandex.Detector.DetectorException", "class_yandex_1_1_detector_1_1_detector_exception.html", null ]
     ] ],
-    [ "IEquatable< Error >", null, [
-      [ "Yandex.Detector.Error", "class_yandex_1_1_detector_1_1_error.html", null ]
-    ] ],
-    [ "IEquatable< IJavaPlatform >", null, [
-      [ "Yandex.Detector.JavaPlatform", "class_yandex_1_1_detector_1_1_java_platform.html", null ]
-    ] ],
-    [ "IEquatable< IMobileDevice >", null, [
+    [ "IEquatable", null, [
+      [ "Yandex.Detector.Error", "class_yandex_1_1_detector_1_1_error.html", null ],
+      [ "Yandex.Detector.JavaPlatform", "class_yandex_1_1_detector_1_1_java_platform.html", null ],
       [ "Yandex.Detector.MobileDevice", "class_yandex_1_1_detector_1_1_mobile_device.html", null ]
     ] ],
     [ "Yandex.Detector.IDetectorRequest", "interface_yandex_1_1_detector_1_1_i_detector_request.html", null ],
