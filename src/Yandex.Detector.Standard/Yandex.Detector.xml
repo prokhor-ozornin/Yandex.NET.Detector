@@ -1,0 +1,494 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Yandex.Detector</name>
+    </assembly>
+    <members>
+        <member name="T:Yandex.Detector.DetectorException">
+            <summary>
+              <para>Represent error that occurs during execution of request to Yandex.Detector service.</para>
+            </summary>
+        </member>
+        <member name="M:Yandex.Detector.DetectorException.#ctor(System.String,System.Exception)">
+            <summary>
+              <para>Initializes a new instance exception with a specified error message and a reference to the inner exception that is the cause of this exception.</para>
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a <c>null</c> reference.</param>
+            <exception cref="T:System.ArgumentNullException">If <paramref name="message"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="message"/> is <see cref="F:System.String.Empty"/> string.</exception>
+        </member>
+        <member name="T:Yandex.Detector.Error">
+            <summary>
+              <para></para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.Error.Text">
+            <summary>
+              <para></para>
+            </summary>
+        </member>
+        <member name="M:Yandex.Detector.Error.Equals(Yandex.Detector.Error)">
+            <summary>
+              <para>Determines whether two <see cref="T:Yandex.Detector.Error"/> instances are equal.</para>
+            </summary>
+            <param name="other">The instance to compare with the current one.</param>
+            <returns><c>true</c> if specified instance is equal to the current, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Yandex.Detector.Error.Equals(System.Object)">
+            <summary>
+              <para>Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.</para>
+            </summary>
+            <param name="other">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
+        </member>
+        <member name="M:Yandex.Detector.Error.GetHashCode">
+            <summary>
+              <para>Returns hash code for the current object.</para>
+            </summary>
+            <returns>Hash code of current instance.</returns>
+        </member>
+        <member name="M:Yandex.Detector.Error.ToString">
+            <summary>
+              <para>Returns a <see cref="T:System.String"/> that represents the current <see cref="T:Yandex.Detector.Error"/> instance.</para>
+            </summary>
+            <returns>A string that represents the current <see cref="T:Yandex.Detector.Error"/>.</returns>
+        </member>
+        <member name="T:Yandex.Detector.IDetectorRequest">
+            <summary>
+              <para>Represents a configurable request to the Yandex.Detector service.</para>
+            </summary>
+        </member>
+        <member name="M:Yandex.Detector.IDetectorRequest.Header(System.String,System.Object)">
+            <summary>
+              <para>Add new mobile device header for HTTP request, or replaces an existing one.</para>
+            </summary>
+            <param name="name">Name of the header.</param>
+            <param name="value">Value of the header.</param>
+            <returns>Back reference to the current request instance.</returns>
+            <exception cref="T:System.ArgumentNullException">If either <paramref name="name"/> or <paramref name="value"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="name"/> is <see cref="F:System.String.Empty"/> string.</exception>
+        </member>
+        <member name="T:Yandex.Detector.IDetectorRequestExtensions">
+            <summary>
+              <para>Set of extension methods for interface <see cref="T:Yandex.Detector.IDetectorRequest"/>.</para>
+            </summary>
+            <seealso cref="T:Yandex.Detector.IDetectorRequest"/>
+        </member>
+        <member name="M:Yandex.Detector.IDetectorRequestExtensions.OperaMini(Yandex.Detector.IDetectorRequest,System.String)">
+            <summary>
+              <para>Adds new header for HTTP request that identifies target mobile device as having an Opera Mini browser installed.</para>
+            </summary>
+            <param name="request">Instance of request to Yandex.Detector service.</param>
+            <param name="version">Version of installed Opera Mini.</param>
+            <returns>Back reference to the provided <paramref name="request"/> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">If either <paramref name="request"/> or <paramref name="version"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="version"/> is <see cref="F:System.String.Empty"/> string.</exception>
+            <seealso cref="M:Yandex.Detector.IDetectorRequest.Header(System.String,System.Object)"/>
+        </member>
+        <member name="M:Yandex.Detector.IDetectorRequestExtensions.Profile(Yandex.Detector.IDetectorRequest,System.String)">
+            <summary>
+              <para>Adds set of headers for HTTP request that indicates a mobile profile of the target device.</para>
+              <para>The following HTTP headers are set : "profile", "wap-profile", "x-wap-profile".</para>
+            </summary>
+            <param name="request">Instance of request to Yandex.Detector service.</param>
+            <param name="profile">Value of HTTP mobile profile headers.</param>
+            <returns>Back reference to the provided <paramref name="request"/> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">If either <paramref name="request"/> or <paramref name="profile"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="profile"/> is <see cref="F:System.String.Empty"/> string.</exception>
+            <seealso cref="M:Yandex.Detector.IDetectorRequest.Header(System.String,System.Object)"/>
+        </member>
+        <member name="M:Yandex.Detector.IDetectorRequestExtensions.UserAgent(Yandex.Detector.IDetectorRequest,System.String)">
+            <summary>
+              <para>Adds new "user-agent" header for HTTP request that identifies a target mobile device.</para>
+            </summary>
+            <param name="request">Instance of request to Yandex.Detector service.</param>
+            <param name="userAgent">Value of User-agent header.</param>
+            <returns>Back reference to the provided <paramref name="request"/> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">If either <paramref name="request"/> or <paramref name="userAgent"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="userAgent"/> is <see cref="F:System.String.Empty"/> string.</exception>
+            <seealso cref="M:Yandex.Detector.IDetectorRequest.Header(System.String,System.Object)"/>
+        </member>
+        <member name="T:Yandex.Detector.IJavaPlatform">
+            <summary>
+              <para>Mobile Java platform capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IJavaPlatform.Camera">
+            <summary>
+              <para>Whether Java applications have access to device's camera.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IJavaPlatform.Certificate">
+            <summary>
+              <para>Prefix of Java certificate.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IJavaPlatform.FileSystem">
+            <summary>
+              <para>Whether Java applications have access to device's filesystem.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IJavaPlatform.IconHeight">
+            <summary>
+              <para>Height of Java applications icons.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IJavaPlatform.IconWidth">
+            <summary>
+              <para>Width of Java applications icons.</para>
+            </summary>
+        </member>
+        <member name="T:Yandex.Detector.IMobileDetector">
+            <summary>
+              <para>Provides access to functionality of Yandex.Detector mobile service.</para>
+            </summary>
+        </member>
+        <member name="M:Yandex.Detector.IMobileDetector.Detect(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+              <para>Performs request to Yandex.Detector web service and determines capabilities of mobile client device, using provided HTTP headers for its identification.</para>
+            </summary>
+            <param name="headers">Map of mobile device's HTTP headers with values.</param>
+            <returns>Instance of <see cref="T:Yandex.Detector.IMobileDevice"/> object, describing capabilities of identified mobile device.</returns>
+            <exception cref="T:System.ArgumentNullException">If <paramref name="headers"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:Yandex.Detector.DetectorException">If there was error either during the request to Yandex.Detector web service, or mobile device cannot be identified based on a set of provided HTTP headers.</exception>
+        </member>
+        <member name="T:Yandex.Detector.IMobileDetectorExtensions">
+            <summary>
+              <para>Set of extension methods for interface <see cref="T:Yandex.Detector.IMobileDetector"/>.</para>
+            </summary>
+            <seealso cref="T:Yandex.Detector.IMobileDetector"/>
+        </member>
+        <member name="M:Yandex.Detector.IMobileDetectorExtensions.Detect(Yandex.Detector.IMobileDetector,System.Action{Yandex.Detector.IDetectorRequest})">
+            <summary>
+              <para>Performs request to Yandex.Detector web service and determines capabilities of mobile client device.</para>
+            </summary>
+            <param name="detector">Instance of client for Yandex.Detector web service.</param>
+            <param name="request">Delegate that performs configuration of mobile device's HTTP headers to be send with request.</param>
+            <returns>Instance of <see cref="T:Yandex.Detector.IMobileDevice"/> object, describing capabilities of identified mobile device.</returns>
+            <exception cref="T:System.ArgumentNullException">If either <paramref name="detector"/> or <paramref name="request"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:Yandex.Detector.DetectorException">If there was error either during the request to Yandex.Detector web service, or mobile device cannot be identified based on a set of provided HTTP headers.</exception>
+            <seealso cref="M:Yandex.Detector.IMobileDetector.Detect(System.Collections.Generic.IDictionary{System.String,System.Object})"/>
+            <seealso cref="!:Detect(IMobileDetector, IDictionary&lt;string, object&gt;, out IMobileDevice)"/>
+            <seealso cref="!:Detect(IMobileDetector, Action&lt;IDetectorRequest&gt;, out IMobileDevice)"/>
+        </member>
+        <member name="T:Yandex.Detector.IMobileDevice">
+            <summary>
+              <para>Contains information about mobile device and its features and capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.Description">
+            <summary>
+              <para>Description of device's class.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.DeviceClass">
+            <summary>
+              <para>Class of devices.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.Java">
+            <summary>
+              <para>Device's installed Java platform capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.Name">
+            <summary>
+              <para>Device's model name.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.ScreenHeight">
+            <summary>
+              <para>Device's screen vertical height (px).</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.ScreenWidth">
+            <summary>
+              <para>Device's screen horizontal width (px).</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.IMobileDevice.Vendor">
+            <summary>
+              <para>Name of device's vendor.</para>
+            </summary>
+        </member>
+        <member name="T:Yandex.Detector.JavaPlatform">
+            <summary>
+              <para>Mobile Java platform capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.Camera">
+            <summary>
+              <para>Whether Java applications have access to device's camera.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.CameraAccess">
+            <summary>
+              <para>Whether Java applications have access to device's camera.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.Certificate">
+            <summary>
+              <para>Prefix of Java certificate.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.FileSystem">
+            <summary>
+              <para>Whether Java applications have access to device's filesystem.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.FileSystemAccess">
+            <summary>
+              <para>Whether Java applications have access to device's filesystem.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.IconSize">
+            <summary>
+              <para>Size of Java applications icons (width x height).</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.IconHeight">
+            <summary>
+              <para>Height of Java applications icons.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.JavaPlatform.IconWidth">
+            <summary>
+              <para>Width of Java applications icons.</para>
+            </summary>
+        </member>
+        <member name="M:Yandex.Detector.JavaPlatform.Equals(Yandex.Detector.IJavaPlatform)">
+            <summary>
+              <para>Determines whether two <see cref="T:Yandex.Detector.IJavaPlatform"/> instances are equal.</para>
+            </summary>
+            <param name="other">The instance to compare with the current one.</param>
+            <returns><c>true</c> if specified instance is equal to the current, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Yandex.Detector.JavaPlatform.Equals(System.Object)">
+            <summary>
+              <para>Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.</para>
+            </summary>
+            <param name="other">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
+        </member>
+        <member name="M:Yandex.Detector.JavaPlatform.GetHashCode">
+            <summary>
+              <para>Returns hash code for the current object.</para>
+            </summary>
+            <returns>Hash code of current instance.</returns>
+        </member>
+        <member name="T:Yandex.Detector.MobileDevice">
+            <summary>
+              <para>Contains information about mobile device and its features and capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.Description">
+            <summary>
+              <para>Description of device's class.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.DeviceClass">
+            <summary>
+              <para>Class of devices.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.Java">
+            <summary>
+              <para>Device's installed Java platform capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.JavaPlatform">
+            <summary>
+              <para>Device's installed Java platform capabilities.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.Name">
+            <summary>
+              <para>Device's model name.</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.ScreenHeight">
+            <summary>
+              <para>Device's screen vertical height (px).</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.ScreenWidth">
+            <summary>
+              <para>Device's screen horizontal width (px).</para>
+            </summary>
+        </member>
+        <member name="P:Yandex.Detector.MobileDevice.Vendor">
+            <summary>
+              <para>Name of device's vendor.</para>
+            </summary>
+        </member>
+        <member name="M:Yandex.Detector.MobileDevice.GetDeviceClass">
+            <summary>
+              <para>Returns class of devices as instance of <see cref="T:Yandex.Detector.MobileDevicesClass"/> enumeration.</para>
+            </summary>
+            <returns>Class of devices.</returns>
+        </member>
+        <member name="M:Yandex.Detector.MobileDevice.Equals(Yandex.Detector.IMobileDevice)">
+            <summary>
+              <para>Determines whether two <see cref="T:Yandex.Detector.IMobileDevice"/> instances are equal.</para>
+            </summary>
+            <param name="other">The instance to compare with the current one.</param>
+            <returns><c>true</c> if specified instance is equal to the current, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Yandex.Detector.MobileDevice.Equals(System.Object)">
+            <summary>
+              <para>Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>.</para>
+            </summary>
+            <param name="other">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
+        </member>
+        <member name="M:Yandex.Detector.MobileDevice.GetHashCode">
+            <summary>
+              <para>Returns hash code for the current object.</para>
+            </summary>
+            <returns>Hash code of current instance.</returns>
+        </member>
+        <member name="M:Yandex.Detector.MobileDevice.ToString">
+            <summary>
+              <para>Returns a <see cref="T:System.String"/> that represents the current <see cref="T:Yandex.Detector.MobileDevice"/> instance.</para>
+            </summary>
+            <returns>A string that represents the current <see cref="T:Yandex.Detector.MobileDevice"/>.</returns>
+        </member>
+        <member name="T:Yandex.Detector.MobileDevicesClass">
+            <summary>
+              <para>Well-known classes of mobile devices.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.UIQ2">
+            <summary>
+              <para>Symbian UIQ2.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.UIQ3">
+            <summary>
+              <para>Symbian UIQ3.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.S60v1">
+            <summary>
+              <para>Symbian S60v1.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.S60v2">
+            <summary>
+              <para>Symbian S60v2.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.S60v3">
+            <summary>
+              <para>Symbian S60v3.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.S60v5">
+            <summary>
+              <para>Symbian S60v5.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WM4SP">
+            <summary>
+              <para>Microsoft Windows Mobile 2003 Smartphone edition.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WM4PPC">
+            <summary>
+              <para>Microsoft Windows Mobile 2003 Pocket PC edition.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WM5SP">
+            <summary>
+              <para>Microsoft Windows Mobile 2005 Smartphone edition.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WM5PPC">
+            <summary>
+              <para>Microsoft Windows Mobile 2005 Pocket PC edition.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WM6SP">
+            <summary>
+              <para>Microsoft Windows Mobile 2006 Smartphone edition.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WM6PPC">
+            <summary>
+              <para>Microsoft Windows Mobile 2006 Pocket PC edition.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.WMGeneric">
+            <summary>
+              <para>Microsoft Windows Mobile Generic.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2ss">
+            <summary>
+              <para>Java MIDP2 (small).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2bs">
+            <summary>
+              <para>Java MIDP2 (big).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.midp2hs">
+            <summary>
+              <para>Java MIDP2 (huge).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2ssg">
+            <summary>
+              <para>Java MIDP2 (small + bluetooth).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2bsg">
+            <summary>
+              <para>Java MIDP2 (big + bluetooth).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2hsg">
+            <summary>
+              <para>Java MIDP2 (huge + bluetooth).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2lite">
+            <summary>
+              <para>Java MIDP2 (lite).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.MIDP2LiteG">
+            <summary>
+              <para>Java MIDP2 (lite + bluetooth).</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.Android">
+            <summary>
+              <para>Google Android OS.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.Rim">
+            <summary>
+              <para>Blackberry OS.</para>
+            </summary>
+        </member>
+        <member name="F:Yandex.Detector.MobileDevicesClass.IPhoneOS">
+            <summary>
+              <para>Apple iPhone OS.</para>
+            </summary>
+        </member>
+        <member name="T:Yandex.Detector.Yandex">
+            <summary>
+              <para>Entry point for Yandex.Detector web service's access.</para>
+            </summary>
+            <seealso cref="!:http://api.yandex.ru/detector"/>
+        </member>
+        <member name="P:Yandex.Detector.Yandex.Detector">
+            <summary>
+              <para>Returns detector's instance to query Yandex.Detector service.</para>
+            </summary>
+        </member>
+    </members>
+</doc>

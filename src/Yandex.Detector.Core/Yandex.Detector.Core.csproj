@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>Yandex.Detector</AssemblyName>
+    <RootNamespace>Yandex.Detector</RootNamespace>
+    <Version>3.0</Version>
+    <Company>Prokhor Ozornin &lt;prokhor.ozornin@yandex.ru&gt;</Company>
+    <Authors>Prokhor Ozornin &lt;prokhor.ozornin@yandex.ru&gt;</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Prokhor\Documents\GitHub\Yandex.NET.Detector\src\Yandex.Detector.Core\Yandex.Detector.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Yandex.Detector\DetectorException.cs" Link="DetectorException.cs" />
+    <Compile Include="..\Yandex.Detector\DetectorRequest.cs" Link="DetectorRequest.cs" />
+    <Compile Include="..\Yandex.Detector\Error.cs" Link="Error.cs" />
+    <Compile Include="..\Yandex.Detector\IDetectorRequest.cs" Link="IDetectorRequest.cs" />
+    <Compile Include="..\Yandex.Detector\IDetectorRequestExtensions.cs" Link="IDetectorRequestExtensions.cs" />
+    <Compile Include="..\Yandex.Detector\IJavaPlatform.cs" Link="IJavaPlatform.cs" />
+    <Compile Include="..\Yandex.Detector\IMobileDetector.cs" Link="IMobileDetector.cs" />
+    <Compile Include="..\Yandex.Detector\IMobileDetectorExtensions.cs" Link="IMobileDetectorExtensions.cs" />
+    <Compile Include="..\Yandex.Detector\IMobileDevice.cs" Link="IMobileDevice.cs" />
+    <Compile Include="..\Yandex.Detector\JavaPlatform.cs" Link="JavaPlatform.cs" />
+    <Compile Include="..\Yandex.Detector\MobileDetector.cs" Link="MobileDetector.cs" />
+    <Compile Include="..\Yandex.Detector\MobileDevice.cs" Link="MobileDevice.cs" />
+    <Compile Include="..\Yandex.Detector\MobileDevicesClass.cs" Link="MobileDevicesClass.cs" />
+    <Compile Include="..\Yandex.Detector\Yandex.cs" Link="Yandex.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Catharsis.Commons" Version="4.0.0" />
+  </ItemGroup>
+
+</Project>

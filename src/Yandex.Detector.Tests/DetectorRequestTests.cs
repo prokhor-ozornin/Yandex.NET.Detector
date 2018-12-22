@@ -32,7 +32,7 @@ namespace Yandex.Detector
       Assert.Throws<ArgumentException>(() => builder.Header(string.Empty, "value"));
 
       Assert.True(ReferenceEquals(builder, builder.Header("header", "value")));
-      Assert.Equal(1, builder.Headers.Count());
+      Assert.Single(builder.Headers);
       Assert.Equal("header", builder.Headers.FirstOrDefault().Key);
       Assert.Equal("value", builder.Headers.FirstOrDefault().Value);
     }

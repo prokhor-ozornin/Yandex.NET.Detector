@@ -21,7 +21,7 @@ namespace Yandex.Detector
 
       var request = new DetectorRequest();
       Assert.True(ReferenceEquals(request, request.OperaMini("version")));
-      Assert.Equal(1, request.Headers.Count());
+      Assert.Single(request.Headers);
       Assert.Equal("x-operamini-phone-ua", request.Headers.FirstOrDefault().Key);
       Assert.Equal("version", request.Headers.FirstOrDefault().Value);
     }
@@ -59,7 +59,7 @@ namespace Yandex.Detector
 
       var builder = new DetectorRequest();
       Assert.True(ReferenceEquals(builder, builder.UserAgent("userAgent")));
-      Assert.Equal(1, builder.Headers.Count());
+      Assert.Single(builder.Headers);
       Assert.Equal("user-agent", builder.Headers.FirstOrDefault().Key);
       Assert.Equal("userAgent", builder.Headers.FirstOrDefault().Value);
     }
