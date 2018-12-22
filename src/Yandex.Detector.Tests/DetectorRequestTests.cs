@@ -17,7 +17,7 @@ namespace Yandex.Detector
     public void Constructors()
     {
       var builder = new DetectorRequest();
-      Assert.False(builder.Headers.Any());
+      Assert.Empty(builder.Headers);
     }
 
     /// <summary>
