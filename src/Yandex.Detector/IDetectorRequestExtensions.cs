@@ -1,8 +1,8 @@
-﻿using System;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using Catharsis.Commons;
+
   /// <summary>
   ///   <para>Set of extension methods for interface <see cref="IDetectorRequest"/>.</para>
   /// </summary>

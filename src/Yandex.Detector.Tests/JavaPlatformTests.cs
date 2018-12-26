@@ -66,10 +66,10 @@ namespace Yandex.Detector
     [Fact]
     public void Equals_Method()
     {
-      this.TestEquality("Camera", true, false);
-      this.TestEquality("Certificate", "first", "second");
-      this.TestEquality("FileSystem", true, false);
-      this.TestEquality("IconSize", "16x16", "32x32");
+      TestEquality("Camera", true, false);
+      TestEquality("Certificate", "first", "second");
+      TestEquality("FileSystem", true, false);
+      TestEquality("IconSize", "16x16", "32x32");
     }
 
     /// <summary>
@@ -78,10 +78,10 @@ namespace Yandex.Detector
     [Fact]
     public void GetHashCode_Method()
     {
-      this.TestHashCode("Camera", true, false);
-      this.TestHashCode("Certificate", "first", "second");
-      this.TestHashCode("FileSystem", true, false);
-      this.TestHashCode("IconSize", "16x16", "32x32");
+      TestHashCode("Camera", true, false);
+      TestHashCode("Certificate", "first", "second");
+      TestHashCode("FileSystem", true, false);
+      TestHashCode("IconSize", "16x16", "32x32");
     }
   }
 }

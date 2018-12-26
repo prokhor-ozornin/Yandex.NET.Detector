@@ -80,7 +80,7 @@ namespace Yandex.Detector
     [Fact]
     public void Equals_Method()
     {
-      this.TestEquality("Name", "first", "second");
+      TestEquality("Name", "first", "second");
     }
 
     /// <summary>
@@ -89,7 +89,7 @@ namespace Yandex.Detector
     [Fact]
     public void GetHashCode_Method()
     {
-      this.TestHashCode("Name", "first", "second");
+      TestHashCode("Name", "first", "second");
     }
 
     /// <summary>

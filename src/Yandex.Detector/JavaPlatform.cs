@@ -1,10 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using System.Xml.Serialization;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using System.ComponentModel;
+  using System.Xml.Serialization;
+  using Catharsis.Commons;
+
   /// <summary>
   ///   <para>Mobile Java platform capabilities.</para>
   /// </summary>
@@ -24,8 +24,8 @@ namespace Yandex.Detector
     [EditorBrowsable(EditorBrowsableState.Never)]
     public byte CameraAccess
     {
-      get { return this.Camera ? (byte) 1 : (byte) 0; }
-      set { this.Camera = value > 0; }
+      get => Camera ? (byte) 1 : (byte) 0;
+      set => Camera = value > 0;
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ namespace Yandex.Detector
     [EditorBrowsable(EditorBrowsableState.Never)]
     public byte FileSystemAccess
     {
-      get { return this.FileSystem ? (byte)1 : (byte)0; }
-      set { this.FileSystem = value > 0; }
+      get => FileSystem ? (byte)1 : (byte)0;
+      set => FileSystem = value > 0;
     }
 
     /// <summary>
@@ -58,12 +58,12 @@ namespace Yandex.Detector
     [EditorBrowsable(EditorBrowsableState.Never)]
     public string IconSize
     {
-      get { return string.Format("{0}x{1}", this.IconWidth, this.IconHeight); }
+      get => string.Format("{0}x{1}", IconWidth, IconHeight);
       set
       {
         var dimensions = value.Split('x');
-        this.IconWidth = dimensions[0].ToInt16();
-        this.IconHeight = dimensions[1].ToInt16();
+        IconWidth = dimensions[0].ToInt16();
+        IconHeight = dimensions[1].ToInt16();
       }
     }
 
@@ -94,7 +94,7 @@ namespace Yandex.Detector
     /// <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
     public override bool Equals(object other)
     {
-      return this.Equals(other as IJavaPlatform);
+      return Equals(other as IJavaPlatform);
     }
 
     /// <summary>

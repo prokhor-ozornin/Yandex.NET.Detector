@@ -1,10 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using System.Xml.Serialization;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using System.ComponentModel;
+  using System.Xml.Serialization;
+  using Catharsis.Commons;
+
   /// <summary>
   ///   <para>Contains information about mobile device and its features and capabilities.</para>
   /// </summary>
@@ -28,10 +28,7 @@ namespace Yandex.Detector
     /// </summary>
     [XmlIgnore]
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public IJavaPlatform Java
-    {
-      get { return this.JavaPlatform; }
-    }
+    public IJavaPlatform Java => JavaPlatform;
 
     /// <summary>
     ///   <para>Device's installed Java platform capabilities.</para>
@@ -69,7 +66,7 @@ namespace Yandex.Detector
     /// <returns>Class of devices.</returns>
     public MobileDevicesClass GetDeviceClass()
     {
-      return Enum.Parse(typeof(MobileDevicesClass), this.DeviceClass, true).To<MobileDevicesClass>();
+      return Enum.Parse(typeof(MobileDevicesClass), DeviceClass, true).To<MobileDevicesClass>();
     }
 
     /// <summary>
@@ -89,7 +86,7 @@ namespace Yandex.Detector
     /// <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
     public override bool Equals(object other)
     {
-      return this.Equals(other as IMobileDevice);
+      return Equals(other as IMobileDevice);
     }
 
     /// <summary>
@@ -107,7 +104,7 @@ namespace Yandex.Detector
     /// <returns>A string that represents the current <see cref="MobileDevice"/>.</returns>
     public override string ToString()
     {
-      return this.Name;
+      return Name;
     }
   }
 }

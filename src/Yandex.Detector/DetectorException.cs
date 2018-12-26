@@ -1,8 +1,8 @@
-﻿using System;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using Catharsis.Commons;
+
   /// <summary>
   ///   <para>Represent error that occurs during execution of request to Yandex.Detector service.</para>
   /// </summary>

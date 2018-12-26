@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System.Collections.Generic;
+  using Catharsis.Commons;
+
   internal sealed class DetectorRequest : IDetectorRequest
   {
     private readonly IDictionary<string, object> headers = new Dictionary<string, object>();
@@ -12,13 +12,13 @@ namespace Yandex.Detector
       Assertion.NotEmpty(name);
       Assertion.NotNull(value);
 
-      this.headers[name] = value;
+      headers[name] = value;
       return this;
     }
 
     public IDictionary<string, object> Headers
     {
-      get { return this.headers; }
+      get { return headers; }
     }
   }
 }

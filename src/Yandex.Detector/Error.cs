@@ -1,9 +1,9 @@
-﻿using System;
-using System.Xml.Serialization;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using System.Xml.Serialization;
+  using Catharsis.Commons;
+
   /// <summary>
   ///   <para></para>
   /// </summary>
@@ -33,7 +33,7 @@ namespace Yandex.Detector
     /// <returns><c>true</c> if the specified object is equal to the current object, <c>false</c>.</returns>
     public override bool Equals(object other)
     {
-      return this.Equals(other as Error);
+      return Equals(other as Error);
     }
 
     /// <summary>
@@ -51,7 +51,7 @@ namespace Yandex.Detector
     /// <returns>A string that represents the current <see cref="Error"/>.</returns>
     public override string ToString()
     {
-      return this.Text;
+      return Text;
     }
   }
 }

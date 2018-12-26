@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+
   /// <summary>
   ///   <para>Represents a configurable request to the Yandex.Detector service.</para>
   /// </summary>

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using System.Collections.Generic;
+  using System.Threading.Tasks;
+
   /// <summary>
   ///   <para>Provides access to functionality of Yandex.Detector mobile service.</para>
   /// </summary>

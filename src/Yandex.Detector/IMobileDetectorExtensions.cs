@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Catharsis.Commons;
-using System.Threading.Tasks;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using System.Collections.Generic;
+  using Catharsis.Commons;
+  using System.Threading.Tasks;
+
   /// <summary>
   ///   <para>Set of extension methods for interface <see cref="IMobileDetector"/>.</para>
   /// </summary>

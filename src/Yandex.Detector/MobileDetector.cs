@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using Catharsis.Commons;
-
-namespace Yandex.Detector
+﻿namespace Yandex.Detector
 {
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Net;
+  using System.Threading.Tasks;
+  using Catharsis.Commons;
+
   internal sealed class MobileDetector : IMobileDetector
   {
     private const string EndpointUrl = "http://phd.yandex.net/detect/";
